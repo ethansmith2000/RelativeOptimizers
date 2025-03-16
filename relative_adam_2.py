@@ -2,6 +2,7 @@ import os
 import torch
 import torch.distributed as dist
 
+
 class RelativeAdam2(torch.optim.Optimizer):
     def __init__(self, params, lr=1e-4, weight_decay=0, beta1=0.9, beta2=0.999, eps=1e-8, param_eps=1e-4):
         defaults = dict(lr=lr, weight_decay=weight_decay, beta1=beta1, beta2=beta2, eps=eps, param_eps=param_eps)
